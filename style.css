@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    border:1px solid red;
+    height: 500px;
+    width:375px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+.container .screen{
+    border: 1px solid green;
+    height: 150px;
+    /* flex:0; */
+    display: flex;
+    margin-bottom: 7px;
+}
+.container .buttons{
+    border: 5px solid orange;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .buttons .firstFourBtns{
+    border:1px solid rebeccapurple;
+    flex:1;
+}
+.container .buttons .secondFourBtns{
+    border:1px solid rebeccapurple;
+    flex:1;
+}
+.container .buttons .thirdFourBtns{
+    border:1px solid rebeccapurple;
+    flex:1;
+}
+.container .buttons .fourthFourBtns{
+    border:1px solid rgb(49, 144, 18);
+    flex:1;
+}
+.container .buttons .fifthTwoBtns{
+    flex:1;
+}
+
+
+.container .fourBtns{
+    display: flex;
+}
+button{
+    display: block;
+    /* height:25px; */
+    /* width:70px; */
+    flex:1;
+    font-size: 20px;
+    margin:5px;
+    border: transparent;
+}
