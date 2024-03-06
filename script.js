@@ -33,3 +33,17 @@ function operate(operator,firstNum,secondNum){
         return divide(firstNum,secondNum);
     }
 };
+
+function imPregnateTheScreen(){
+    let numBtns = document.querySelectorAll('.fourBtns .numBtns');
+    numBtns.forEach((numBtn) => {
+        numBtn.addEventListener('click',()=>{
+            // alert('FUCK U');
+            let displayValue = numBtn.textContent;
+            let screenText = document.querySelector('.screen .screenText');
+            screenText.textContent = displayValue;
+        })
+    })
+}
+
+imPregnateTheScreen();
