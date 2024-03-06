@@ -4,59 +4,81 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: azure;
+}
 .container{
-    border:1px solid red;
-    height: 500px;
-    width:375px;
-    margin:0 auto;
+    border:1px solid rgb(43, 41, 41);
+    background-color:gainsboro;
+    border-radius: 10px;
+    height: 550px;
+    width:400px;
+    margin:auto auto;
     display: flex;
     flex-direction: column;
-    padding:10px;
+    padding:15px;
+    margin-top: 175px;
 }
 .container .screen{
-    border: 1px solid green;
+    border: 1px solid rgb(5, 5, 5);
+    background-color: azure;
+    border-radius: 8px;
     height: 150px;
     /* flex:0; */
-    display: flex;
-    margin-bottom: 7px;
+    font-size: 50px;
+    
+    margin-bottom: 20px;
 }
 .container .buttons{
-    border: 5px solid orange;
+    /* border: 5px solid orange; */
+
     flex:1;
+    /* height: 400px; */
     display: flex;
     flex-direction: column;
 }
 
 .container .buttons .firstFourBtns{
-    border:1px solid rebeccapurple;
+    /* border:1px solid rebeccapurple; */
     flex:1;
+    
 }
 .container .buttons .secondFourBtns{
-    border:1px solid rebeccapurple;
+    /* border:1px solid rebeccapurple; */
     flex:1;
 }
 .container .buttons .thirdFourBtns{
-    border:1px solid rebeccapurple;
+    /* border:1px solid rebeccapurple; */
     flex:1;
 }
 .container .buttons .fourthFourBtns{
-    border:1px solid rgb(49, 144, 18);
+    /* border:1px solid rgb(49, 144, 18); */
     flex:1;
 }
 .container .buttons .fifthTwoBtns{
     flex:1;
 }
 
+.clearBtn, .deleteBtn{
+    height: 65px;
+}
+.clearBtn{
+    background-color: rgb(247, 175, 175);
+}
+.deleteBtn{
+    background-color: rgb(205, 225, 174);
+}
 
 .container .fourBtns{
     display: flex;
 }
 button{
     display: block;
-    /* height:25px; */
+    height:55px;
     /* width:70px; */
     flex:1;
     font-size: 20px;
     margin:5px;
-    border: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
 }
