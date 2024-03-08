@@ -15,6 +15,7 @@ let firstNum = '';
 let operator = '';
 let secondNum = '';
 let isOperatorClicked = false;
+let solution = '';
 
 function operate(operator,firstNum,secondNum){
     if(operator == "+"){
@@ -37,12 +38,12 @@ function imPregnateTheScreen()
     let numBtns = document.querySelectorAll('.fourBtns .numBtns');
     numBtns.forEach((numBtn) => {
         numBtn.addEventListener('click',() => {
-            if(isOperatorClicked == false){
-                // alert('FUCK U');
+            if(isOperatorClicked == false)
+            {
                 let displayValue = numBtn.textContent;
                 let firstNumScreen = document.querySelector('.screen .firstNumScreen');
                 firstNumScreen.textContent += displayValue;
-                firstNum = firstNumScreen.textContent;
+                firstNum = Number(firstNumScreen.textContent);
                 console.log(`1st num :${firstNum}`);
                 console.log(typeof(firstNum));
             }
@@ -68,14 +69,24 @@ function imPregnateTheScreen()
         secondNumBtn.addEventListener('click',() => {
                 if(isOperatorClicked == true)
                 {
-                let secondNumValFromBtn = secondNumBtn.textContent;
-                let secondNumScreen = document.querySelector('.secondNumScreen');
-                secondNumScreen.textContent += secondNumValFromBtn;
-                secondNum = secondNumScreen.textContent;
-                console.log(`2nd num : ${secondNum}`);
+                    let secondNumValFromBtn = secondNumBtn.textContent;
+                    let secondNumScreen = document.querySelector('.secondNumScreen');
+                    secondNumScreen.textContent += secondNumValFromBtn;
+                    secondNum = Number(secondNumScreen.textContent);
+                    console.log(`2nd num : ${secondNum}`);
                 }
             })
         })
+
+
+    // "="
+    let equalsToBtn = document.querySelector('.equalsToBtn');
+    equalsToBtn.addEventListener('click',() => {
+        solution = operate(operator,firstNum,secondNum);
+        console.log(solution);
+        let equalsToScreen = document.querySelector('.equalsToScreen');
+        equalsToScreen.textContent = " = " + solution;
+    })
 }
 
 imPregnateTheScreen();
