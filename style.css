@@ -25,9 +25,23 @@ body{
     border-radius: 8px;
     height: 150px;
     /* flex:0; */
-    font-size: 50px;
+    font-size: 45px;
     
     margin-bottom: 20px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+
+}
+
+.firstNumScreen{
+    border:1px solid red;
+}
+.operatorScreen{
+    border:1px solid orange;
+}
+.secondNumScreen{
+    border:1px solid green;
 }
 .container .buttons{
     /* border: 5px solid orange; */
