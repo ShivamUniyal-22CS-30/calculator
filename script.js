@@ -26,14 +26,14 @@ function operate(operator,firstNum,secondNum){
     else if(operator == "x"){
         return multiply(firstNum,secondNum);
     }
-    else if(operator == "/"){
+    else if(operator == "÷"){
         return divide(firstNum,secondNum);
     }
 };
 
 function imPregnateTheScreen()
 {
-    
+    // firstNum
     let numBtns = document.querySelectorAll('.fourBtns .numBtns');
     numBtns.forEach((numBtn) => {
         numBtn.addEventListener('click',() => {
@@ -44,10 +44,12 @@ function imPregnateTheScreen()
                 firstNumScreen.textContent += displayValue;
                 firstNum = firstNumScreen.textContent;
                 console.log(`1st num :${firstNum}`);
+                console.log(typeof(firstNum));
             }
         })
     })
 
+    // operator
     let operatorBtns = document.querySelectorAll('.operator');
     operatorBtns.forEach((operatorBtn) => {
         operatorBtn.addEventListener('click', () => {
@@ -60,10 +62,11 @@ function imPregnateTheScreen()
         })
     })
 
+    // secondNum
     let secondNumBtns = document.querySelectorAll('.fourBtns .numBtns');
     secondNumBtns.forEach((secondNumBtn) => {
         secondNumBtn.addEventListener('click',() => {
-                if(isOperatorClicked ==true)
+                if(isOperatorClicked == true)
                 {
                 let secondNumValFromBtn = secondNumBtn.textContent;
                 let secondNumScreen = document.querySelector('.secondNumScreen');
@@ -73,8 +76,6 @@ function imPregnateTheScreen()
                 }
             })
         })
-    }
-
-
+}
 
 imPregnateTheScreen();
