@@ -40,9 +40,9 @@ function imPregnateTheScreen()
             if(isOperatorClicked == false){
                 // alert('FUCK U');
                 let displayValue = numBtn.textContent;
-                let displayScreen = document.querySelector('.screen .screenText');
-                displayScreen.textContent += displayValue;
-                firstNum = displayScreen.textContent;
+                let firstNumScreen = document.querySelector('.screen .firstNumScreen');
+                firstNumScreen.textContent += displayValue;
+                firstNum = firstNumScreen.textContent;
                 console.log(`1st num :${firstNum}`);
             }
         })
@@ -51,10 +51,10 @@ function imPregnateTheScreen()
     let operatorBtns = document.querySelectorAll('.operator');
     operatorBtns.forEach((operatorBtn) => {
         operatorBtn.addEventListener('click', () => {
-            let operatorDisplay = operatorBtn.textContent;
-            let displayScreen = document.querySelector('.screenText');
-            displayScreen.textContent = operatorDisplay;
-            operator = operatorDisplay;
+            let operatorVal = operatorBtn.textContent;
+            let operatorScreen = document.querySelector('.operatorScreen');
+            operatorScreen.textContent = operatorVal;
+            operator = operatorVal;
             console.log(`operator: ${operator}`);
             isOperatorClicked = true;
         })
@@ -65,10 +65,10 @@ function imPregnateTheScreen()
         secondNumBtn.addEventListener('click',() => {
                 if(isOperatorClicked ==true)
                 {
-                let getTextContentFromBtn = secondNumBtn.textContent;
-                let displayScreen = document.querySelector('.screenText');
-                displayScreen.textContent += getTextContentFromBtn;
-                secondNum = displayScreen.textContent;
+                let secondNumValFromBtn = secondNumBtn.textContent;
+                let secondNumScreen = document.querySelector('.secondNumScreen');
+                secondNumScreen.textContent += secondNumValFromBtn;
+                secondNum = secondNumScreen.textContent;
                 console.log(`2nd num : ${secondNum}`);
                 }
             })
