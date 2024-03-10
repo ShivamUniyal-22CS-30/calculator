@@ -17,6 +17,8 @@ let secondNum = '';
 let isOperatorClicked = false;
 let solution = '';
 
+let operatorClickCounter = 0;
+
 function operate(operator,firstNum,secondNum){
     if(operator == "+"){
         return add(firstNum,secondNum);
@@ -38,7 +40,7 @@ function imPregnateTheScreen()
     let numBtns = document.querySelectorAll('.fourBtns .numBtns');
     numBtns.forEach((numBtn) => {
         numBtn.addEventListener('click',() => {
-            if(isOperatorClicked == false)
+            if(operatorClickCounter == 0)
             {
                 let displayValue = numBtn.textContent;
                 let firstNumScreen = document.querySelector('.screen .firstNumScreen');
@@ -54,6 +56,7 @@ function imPregnateTheScreen()
     let operatorBtns = document.querySelectorAll('.operator');
     operatorBtns.forEach((operatorBtn) => {
         operatorBtn.addEventListener('click', () => {
+            operatorClickCounter+=1;
             let operatorVal = operatorBtn.textContent;
             let operatorScreen = document.querySelector('.operatorScreen');
             operatorScreen.textContent = operatorVal;
@@ -67,7 +70,7 @@ function imPregnateTheScreen()
     let secondNumBtns = document.querySelectorAll('.fourBtns .numBtns');
     secondNumBtns.forEach((secondNumBtn) => {
         secondNumBtn.addEventListener('click',() => {
-                if(isOperatorClicked == true)
+                if(operatorClickCounter == 1)
                 {
                     let secondNumValFromBtn = secondNumBtn.textContent;
                     let secondNumScreen = document.querySelector('.secondNumScreen');
@@ -87,6 +90,9 @@ function imPregnateTheScreen()
         let equalsToScreen = document.querySelector('.equalsToScreen');
         equalsToScreen.textContent = solution;
     })
+
+    // 2nd Time any operator clicked
+    // let secondTimeOperatorClicked = document.querySelectorAll('')
 }
 
 imPregnateTheScreen();
