@@ -85,7 +85,7 @@ function imPregnateTheScreen()
         solution = operate(operator,firstNum,secondNum);
         console.log(solution);
         let equalsToScreen = document.querySelector('.equalsToScreen');
-        equalsToScreen.textContent = " = " + solution;
+        equalsToScreen.textContent = solution;
     })
 }
 
