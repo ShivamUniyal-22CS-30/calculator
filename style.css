@@ -20,20 +20,26 @@ body{
     margin-top: 175px;
 }
 .container .screen{
-    border: 1px solid rgb(5, 5, 5);
+    border: 5px solid rgb(5, 5, 5);
     background-color: azure;
     border-radius: 8px;
     height: 150px;
     /* flex:0; */
-    font-size: 45px;
+    /* font-size: 45px; */
     
     margin-bottom: 20px;
     display: flex;
-    justify-content:flex-end;
-    align-items: center;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content:space-around;
 
 }
 
+.firstSecondNumOperator{
+    border:2px solid red;
+    display: flex;
+    font-size: 25px;
+}
 .firstNumScreen{
     border:1px solid red;
 }
@@ -42,6 +48,10 @@ body{
 }
 .secondNumScreen{
     border:1px solid green;
+}
+.equalsToScreen{
+    border:1px solid purple;
+    font-size: 45px;
 }
 .container .buttons{
     /* border: 5px solid orange; */
