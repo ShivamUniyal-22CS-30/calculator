@@ -87,13 +87,14 @@ clearBtn.addEventListener('click',() => {
 // deletebtn
 let deleteBtn = document.querySelector('.deleteBtn');
 deleteBtn.addEventListener('click', ()=>{
-    if(firstNumScreen.textContent != '' &&  operatorScreen.textContent == '' && secondNumScreen.textContent == '' ){
-        firstNumScreen.textContent = '';
+    if(secondNumScreen.textContent != ''){
+        secondNumScreen.textContent = secondNumScreen.textContent.slice(0,-1);
     }
-    else if(firstNumScreen.textContent != true && operatorScreen.textContent != '' && secondNumScreen.textContent == '' ){
+    else if(operatorScreen.textContent != ''){
         operatorScreen.textContent = '';
+        isOperatorClicked = false;
     }
-    else if(firstNumScreen.textContent != '' && operatorScreen.textContent != '' && secondNumScreen.textContent != ''){
-        secondNumScreen.textContent = '';
+    else if(firstNumScreen.textContent != ''){
+        firstNumScreen.textContent = firstNumScreen.textContent.slice(0,-1);
     }
 })
