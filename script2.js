@@ -79,10 +79,19 @@ equalsToBtn.addEventListener('click', () => {
     if (isOperatorClicked) {
         let firstNum = parseFloat(firstNumScreen.textContent);
         let secondNum = parseFloat(secondNumScreen.textContent);
-        result = operate(firstNum, operators, secondNum);
-        clearScreen();
-        firstNumScreen.textContent = result;
-        isOperatorClicked = false;
+
+        // divide by zero
+        if(operators === '÷' && secondNum === 0){
+            clearScreen();
+            firstNumScreen.textContent = 'F**K YOU'
+            isOperatorClicked = false;
+        }
+        else{
+            result = operate(firstNum, operators, secondNum);
+            clearScreen();
+            firstNumScreen.textContent = result;
+            isOperatorClicked = false;
+        }
     }
 });
 
