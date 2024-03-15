@@ -8,7 +8,6 @@ body{
     background-color: rgb(108, 135, 135);
 }
 .container{
-    /* border:1px solid rgb(43, 41, 41); */
     background-color:#333;
     border-radius: 10px;
     height: 550px;
@@ -22,17 +21,12 @@ body{
     box-shadow: 20px 20px 25px rgb(0, 0, 0);
 }
 .container:hover{
-    /* box-shadow: 15px 15px 10px rgb(0, 255, 255); */
     transform:scale(1.1)
 }
 .container .screen{
-    /* border: 5px solid rgb(5, 5, 5); */
     background-color: rgb(0, 0, 0);
     border-radius: 8px;
     height: 125px;
-    /* flex:0; */
-    /* font-size: 45px; */
-    
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -45,51 +39,37 @@ body{
 }
 
 .firstSecondNumOperator{
-    /* border:2px solid red; */
     display: flex;
-    
 }
 .firstNumScreen{
-    /* border:1px solid red; */
     margin: 5px;
 }
 .operatorScreen{
-    /* border:1px solid orange; */
     margin: 5px;
 }
 .secondNumScreen{
-    /* border:1px solid green; */
     margin: 5px;
 }
 .equalsToScreen{
-    /* border:1px solid purple; */
     margin: 5px;
     font-size: 45px;
 }
 .container .buttons{
-    /* border: 5px solid orange; */
-
     flex:1;
-    /* height: 400px; */
     display: flex;
     flex-direction: column;
 }
 
 .container .buttons .firstFourBtns{
-    /* border:1px solid rebeccapurple; */
-    flex:1;
-    
+    flex:1; 
 }
 .container .buttons .secondFourBtns{
-    /* border:1px solid rebeccapurple; */
     flex:1;
 }
 .container .buttons .thirdFourBtns{
-    /* border:1px solid rebeccapurple; */
     flex:1;
 }
 .container .buttons .fourthFourBtns{
-    /* border:1px solid rgb(49, 144, 18); */
     flex:1;
 }
 .container .buttons .fifthTwoBtns{
@@ -121,7 +101,6 @@ body{
 button{
     display: block;
     height:55px;
-    /* width:70px; */
     background-color: #444;
     color: white;
     flex:1;
