@@ -88,9 +88,16 @@ equalsToBtn.addEventListener('click', () => {
         }
         else{
             result = operate(firstNum, operators, secondNum);
-            clearScreen();
-            firstNumScreen.textContent = result;
-            isOperatorClicked = false;
+            if(!isNaN(result)){
+                clearScreen();
+                firstNumScreen.textContent = result;
+                isOperatorClicked = false;
+            }
+            else{
+                clearScreen();
+                firstNumScreen.textContent = result;
+                isOperatorClicked = false;
+            }
         }
     }
 });
