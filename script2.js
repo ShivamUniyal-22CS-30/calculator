@@ -23,19 +23,27 @@ function clearScreen() {
 }
 
 function operate(a, operator, b) {
+    let result;
     switch (operator) {
         case '+':
-            return a + b;
+            result = a + b;
+            break;
         case '-':
-            return a - b;
+            result = a - b;
+            break;
         case 'x':
-            return a * b;
+            result = a * b;
+            break;
         case '÷':
-            return a / b;
+            result = a / b;
+            break;
         default:
-            return '';
+            result = '';
     }
+    // Round the result to 2 decimal places
+    return Math.round(result * 100) / 100;
 }
+
 
 numBtns.forEach((numBtn) => {
     numBtn.addEventListener('click', () => {
