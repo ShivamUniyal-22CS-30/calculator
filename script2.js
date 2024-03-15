@@ -35,6 +35,9 @@ function operate(a, operator, b) {
             result = a * b;
             break;
         case '÷':
+            if(b == 0){
+                return 'Error';
+            }
             result = a / b;
             break;
         default:
@@ -83,8 +86,9 @@ equalsToBtn.addEventListener('click', () => {
         // divide by zero
         if(operators === '÷' && secondNum === 0){
             clearScreen();
-            firstNumScreen.textContent = 'F**K YOU'
+            firstNumScreen.textContent = 'abe Bosdike sun ..'
             isOperatorClicked = false;
+            document.getElementById('errorAudio').play();
         }
         else{
             result = operate(firstNum, operators, secondNum);
