@@ -77,3 +77,9 @@ equalsToBtn.addEventListener('click', () => {
         isOperatorClicked = false;
     }
 });
+
+// clearBtn
+let clearBtn = document.querySelector('.clearBtn');
+clearBtn.addEventListener('click',() => {
+    clearScreen();
+});
