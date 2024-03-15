@@ -83,3 +83,17 @@ let clearBtn = document.querySelector('.clearBtn');
 clearBtn.addEventListener('click',() => {
     clearScreen();
 });
+
+// deletebtn
+let deleteBtn = document.querySelector('.deleteBtn');
+deleteBtn.addEventListener('click', ()=>{
+    if(firstNumScreen.textContent == true &&  operatorScreen.textContent == false && secondNumScreen.textContent == false ){
+        firstNumScreen.textContent = '';
+    }
+    else if(firstNumScreen.textContent == true && operatorScreen.textContent == true && secondNumScreen.textContent == false ){
+        operatorScreen.textContent = '';
+    }
+    else if(firstNumScreen.textContent == true && operatorScreen.textContent == true && secondNumScreen.textContent == true){
+        secondNumScreen.textContent = '';
+    }
+})
